@@ -1,0 +1,203 @@
+.hardware-page {
+  padding-bottom: 40px;
+}
+
+.hardware-hero {
+  background: linear-gradient(135deg, #0f766e, #2563eb);
+  color: white;
+  border-radius: 22px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.hardware-hero h1 {
+  margin: 0 0 8px;
+}
+
+.hardware-hero p {
+  margin: 0;
+  opacity: .9;
+}
+
+.connection-pill {
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.connection-pill.online {
+  background: rgba(34,197,94,.25);
+}
+
+.hardware-grid,
+.sensor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.hardware-card,
+.hardware-section {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 25px rgba(15,23,42,.08);
+}
+
+.hardware-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hardware-card strong {
+  font-size: 18px;
+}
+
+.danger-card {
+  border: 2px solid #ef4444;
+}
+
+.hardware-section {
+  margin-bottom: 24px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.section-heading h2,
+.hardware-section h2 {
+  margin-top: 0;
+}
+
+.sensor-grid > div {
+  padding: 20px;
+  border-radius: 14px;
+  background: #f8fafc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sensor-grid span {
+  color: #64748b;
+  font-weight: 700;
+}
+
+.sensor-grid strong {
+  font-size: 20px;
+}
+
+.last-update {
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+.refresh-btn,
+.fall-test-btn,
+.safe-test-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.refresh-btn {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.url-row {
+  display: flex;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.url-row input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.demo-toggle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.hardware-error {
+  margin-top: 15px;
+  color: #b91c1c;
+}
+
+.test-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fall-test-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.safe-test-btn {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.fall-alert {
+  background: #fef2f2;
+  border: 2px solid #ef4444;
+  color: #991b1b;
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.fall-alert h2 {
+  margin: 0 0 8px;
+}
+
+@media (max-width: 700px) {
+  .hardware-hero,
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .url-row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout only */
+@media (max-width: 700px){
+  .hardware-page{padding:14px;}
+  .hardware-hero{padding:22px 16px;}
+  .hardware-hero h1{font-size:30px;}
+  .hardware-grid,.sensor-grid{grid-template-columns:1fr;}
+  .hardware-card{min-width:0;}
+  .url-row{flex-wrap:wrap;}
+  .url-row input{width:100%; min-width:0;}
+  .test-buttons{flex-wrap:wrap;}
+}
